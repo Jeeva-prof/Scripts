@@ -8,7 +8,9 @@ sudo cd /opt/
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93.tar.gz
 tar -xvaf apache-tomcat-9.0.93.tar.gz
 sudo cd /opt/
-git clone "url"
+git clone "https://github.com/Jeeva-prof/Scripts.git"
+cd /opt
+mkdir ooooooooooooo
 
 # cp context.xml tomcat/webapps/manager/META-INF
 # cp tomcat-users.xml tomcat/conf/
