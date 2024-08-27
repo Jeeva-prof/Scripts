@@ -1,16 +1,20 @@
 #!/bin/bash
 sudo apt update -y
 sudo apt install openjdk-17-jdk -y
-sudo apt install tomcat9 tomcat9-admin
-sudo su -
-
-sudo cd /opt/
+cd /home/ubuntu
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93.tar.gz
 tar -xvaf apache-tomcat-9.0.93.tar.gz
-sudo cd /opt/
 git clone "https://github.com/Jeeva-prof/Scripts.git"
-cd /opt
-mkdir ooooooooooooo
+mv apache-tomcat-9.0.93 tomcat
+cp Scripts/context.xml tomcat/webapps/manager/META-INF
+cp Scripts/tomcat-users.xml tomcat/conf/
+cd tomcat/bin
+sh startup.sh
 
-# cp context.xml tomcat/webapps/manager/META-INF
-# cp tomcat-users.xml tomcat/conf/
+
+# cp Scripts/context.xml tomcat/webapps/manager/META-INF
+# cp Scripts/tomcat-users.xml tomcat/conf/
+# cd tomcat/bin
+# sh startup.sh
+# tomcat user :admin
+# tomcat passwd:sudotom
